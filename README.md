@@ -11,6 +11,10 @@ How to run:
 5. Copy to Terminal coomand: java -jar subtitles.jar
 6. Enjoy!
 
+Found issues:
+1. Not matched words combinations have timecodes 00:00:00,000
+2. Not handled case if there are several matches of words combinations
+
 Notes:
 1. V 1.0 is for Mac users only
 2. V 1.0 was not tested
