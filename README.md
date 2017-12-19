@@ -1,7 +1,7 @@
 V 1.0
 
 Functionality:
-takes transcript.txt and align.csv files from program folder and creates final.txt file
+takes transcript.txt and align.csv files from Subtitles folder and creates final.txt file
 
 How to run:
 1. Download Subtitles folder from GIT. Save on your hard drive (on Desktop)
