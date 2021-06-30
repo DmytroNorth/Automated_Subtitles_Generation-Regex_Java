@@ -1,5 +1,3 @@
-V 1.0
-
 Functionality:
 takes transcript.txt and align.csv files from Subtitles folder and creates final.txt file
 
@@ -16,5 +14,4 @@ Found issues:
 2. Not handled case if there are several matches of words combinations
 
 Notes:
-1. V 1.0 is for Mac users only
-2. V 1.0 was not tested
+1. for Mac users only
