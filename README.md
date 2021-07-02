@@ -204,8 +204,6 @@ In this stage, we simply rename `.txt` to `.srt` and run through an online tool 
 
 **5.3** Launch **FinalCut Pro** and select File -> Import -> Captions, then select `.srt` file to import subtitles into Video Editing software.
 
-<img width="1280" alt="subs" src="https://user-images.githubusercontent.com/20174979/124312017-806e9080-db23-11eb-8db1-5dbfaf917ec8.png">
-
 ## Conclusion
 Although it took us multiple steps and several online tools, in the end, we did manage to generate properly formatted subtitles from a raw video file with audio with a high degree of control. It can be huge time savings in a video production environment with tight deadlines.
 
