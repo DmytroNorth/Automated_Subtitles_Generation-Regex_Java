@@ -1,5 +1,4 @@
-<img width="1280" alt="subs2" src="https://user-images.githubusercontent.com/20174979/124312409-1b676a80-db24-11eb-8526-8603da0a0405.png">
-
+![alt text](png/subs2.png)
 ## Introduction
 An automated workflow that generates timestamped subtitles from a video file with custom control. Steps include using:
 
@@ -112,7 +111,7 @@ vehicle accidents.
 
 After the clean-up process, we have punctuated and capitalized text without any timecode, double spaces, and line breaks. 
 
-## 3. Edit subtitles
+## 3. Editing subtitles
 Next, let us split the text into logical subtitle chunks and prepare it for automatic timestamping.
 
 **3.1.** Run **regex** to put every sentence on a new line followed by two empty lines.
@@ -148,7 +147,7 @@ and motor vehicle accidents.
 ```
 Once we are done, let's rename it to `transcript.txt`. This will be one of the input files for our custom `subtitles.jar` script in the next stage.
 
-## 4. Auto time-stamp subtitles
+## 4. Auto time-stamping subtitles
 In this stage we will use an automatic forced aligner online tool, that will timestamp every word based on provided audio. After that, we will use a custom **Java** script to pull only the timestamps of the words at the beginning and the end of each subtitle chunk and structure it in a standard `.srt` subtitle format. 
 
 **4.1.** Let us run [**Gentle**](https://lowerquality.com/gentle/) to auto-align text to audio. First, we upload the audio file along with the text. The tool will generate `align.csv` file in the following format:
@@ -195,7 +194,7 @@ and motor vehicle accidents.
 ```
 
 
-## 5. Import to video editor FinalCut Pro X
+## 5. Importing to video editor FinalCut Pro X
 In this stage, we simply rename `.txt` to `.srt` and run through an online tool to avoid possible issues upon importing into video editing software.
 
 **5.1** Change file and name from `.txt` to `.srt`.
