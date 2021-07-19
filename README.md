@@ -129,7 +129,7 @@ After the clean-up process, we have punctuated and capitalized text without any 
 ## 3. Editing subtitles
 Next, let us split the text into logical subtitle chunks and prepare it for automatic timestamping.
 
-**3.1.** Use a online tool like regex101 Run **regex** to put every sentence on a new line followed by two empty lines.
+**3.1.** Use an online tool like regex101 Run **regex** to put every sentence on a new line followed by two empty lines.
 
 ```
 FIND: (\w{2}\. )
