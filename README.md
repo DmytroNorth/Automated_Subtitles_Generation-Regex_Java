@@ -1,13 +1,14 @@
-![alt text](png/subs2.png)
+![alt text](png/subs3.png)
+
+# Automated Subtitles Generation - Regex/Java
 ## Introduction
-An automated workflow that generates timestamped subtitles from a video file with custom control. Steps include using:
+A semi-automated workflow that generates **timestamped subtitles** from a **video file** with custom control. Steps include using:
 
 * **Speech to text** recognition with YouTube
 * **Text cleanup** with regular expressions
 * **Punctuation restoration** with [**Punctuator**](http://bark.phon.ioc.ee/punctuator)
 * **Force alignment** of generated text to audio with [**Kaldi**](https://www.kaldi-asr.org/doc/about.html) based tool [**Gentle**](https://lowerquality.com/gentle/)
 * Custom **Java** script that utilizes generated forced aligned data with preformatted text to output final `.srt` subtitles file.
-
 ### Input
 Any video file with audio such as `.mp4` and `.mov`.
 ### Output
@@ -29,6 +30,20 @@ we see many brain injuries
 that have resulted from falls
 and motor vehicle accidents.
 ```
+## Table of contents
+
+- [Automated Subtitles Generation - Regex/Java](#automated-subtitles-generation---regexjava)
+  - [Introduction](#introduction)
+    - [Input](#input)
+    - [Output](#output)
+  - [Table of contents](#table-of-contents)
+  - [1. Speech to text with YouTube](#1-speech-to-text-with-youtube)
+    - [Issues with YouTube generated subtitles](#issues-with-youtube-generated-subtitles)
+  - [2. Cleaning subtitles from timecode](#2-cleaning-subtitles-from-timecode)
+  - [3. Editing subtitles](#3-editing-subtitles)
+  - [4. Auto time-stamping subtitles](#4-auto-time-stamping-subtitles)
+  - [5. Importing to video editor FinalCut Pro](#5-importing-to-video-editor-finalcut-pro)
+  - [Conclusion](#conclusion)
 
 ## 1. Speech to text with YouTube
 In this stage, we will upload a video file with audio to YouTube and auto-generate low-quality subtitles, which we will be substantially modifying and improving. 
@@ -66,7 +81,7 @@ Nevertheless, this will give us a starting point.
 
 ## 2. Cleaning subtitles from timecode
 
-In this stage, we will remove timecode, line breaks, and double spacing.
+In this stage, we will remove timecode, line breaks, and double spacing. I was using TextSoap.app to run multiple regex commands in one click. However, regex can be run in a free online tool like [regex101](https://regex101.com).
 
 **2.1.1.** Run **regex** to remove timecode.
 
@@ -114,7 +129,7 @@ After the clean-up process, we have punctuated and capitalized text without any 
 ## 3. Editing subtitles
 Next, let us split the text into logical subtitle chunks and prepare it for automatic timestamping.
 
-**3.1.** Run **regex** to put every sentence on a new line followed by two empty lines.
+**3.1.** Use a online tool like regex101 Run **regex** to put every sentence on a new line followed by two empty lines.
 
 ```
 FIND: (\w{2}\. )
@@ -194,7 +209,7 @@ and motor vehicle accidents.
 ```
 
 
-## 5. Importing to video editor FinalCut Pro X
+## 5. Importing to video editor FinalCut Pro
 In this stage, we simply rename `.txt` to `.srt` and run through an online tool to avoid possible issues upon importing into video editing software.
 
 **5.1** Change file and name from `.txt` to `.srt`.
